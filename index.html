@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><span>T</span>RAVEL</a>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#book">Book</a>
+      <a href="#packages">Pakages</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#review">Review</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-user" id="login-btn" title="Login"></i>
+      <i class="fas fa-search" id="search-btn" title="Search"></i>
+    </div>
+
+    <form action="#" class="search-bar-container" id="search-form">
+  <input type="search" id="search-bar" placeholder="Search destinations..." />
+</form>
+
+  </header>
+
+  <!-- Login Modal -->
+  <div class="login-form-container" id="login-modal" aria-hidden="true">
+    <div class="login-card">
+      <i class="fas fa-times" id="form-close" aria-label="Close login"></i>
+      <h3>Login</h3>
+      <form onsubmit="return false;">
+        <input type="email" class="box" placeholder="enter your email" required />
+        <input type="password" class="box" placeholder="enter your password" required minlength="6"/>
+        <input type="submit" value="Login Now" class="btn" />
+        <div class="login-extras">
+          <label class="remember"><input type="checkbox" /> Remember Me</label>
+          <a href="#" class="link">Forgot Password? <b>Click Here</b></a>
+          <a href="#" class="link">Don't Have An Account <b>Register Now</b></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Home / Hero -->
+  <section class="home" id="home">
+    <div class="content">
+      <h1>ADVENTURE IS WORTHWHILE</h1>
+      <p>Discover New Places With Us, Adventure Awaits</p>
+      <a href="#" class="btn">Discover More</a>
+    </div>
+
+    <!-- Hero image slider (dots mimic) -->
+    <!-- Swiper pagination (built-in dots) -->
+<div class="swiper-pagination"></div>
+
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/img.jpg" alt="Lake and mountains">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://etimg.etb2bimg.com/photo/113130018.cms" alt="Forest valley">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img2.jpg" alt="Sea cliffs">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/img3.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section class="book section" id="book">
+    <h2 class="heading">BOOK NOW</h2>
+    <div class="row">
+      <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCys1OyhYNsNXfYtSL53TL70jnNjC8rylYbQ&s" alt="Booking illustration">
+      </div>
+
+      <form class="book-form" onsubmit="return false;">
+        <label class="inputbox">
+          <span>Where To</span>
+          <input type="text" placeholder="hawaii" required />
+        </label>
+        <label class="inputbox">
+          <span>How Many</span>
+          <input type="number" min="1" placeholder="3" required />
+        </label>
+        <label class="inputbox">
+          <span>Arrivals</span>
+          <input type="date" required />
+        </label>
+        <label class="inputbox">
+          <span>Leaving</span>
+          <input type="date" required />
+        </label>
+        <button class="btn" type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="packages section" id="packages">
+    <h2 class="heading">PAKAGES</h2>
+
+    <div class="cards">
+      <article class="card">
+        <img src="images/p4.jpeg " alt="Mumbai">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Mumbai</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars" aria-label="4 stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$100.00 <span>$200.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/p5.avif" alt="Hawaii">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Hawaii</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$90.00 <span>$150.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/p6.jpg" alt="Sydney">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Sydney</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$120.00 <span>$600.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/p3.jpg" alt="new york">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> New york city</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars" aria-label="4 stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$120.00 <span>$500.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/p2.jpeg" alt="rome">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Rome</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$80.00 <span>$150.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/p1.avif" alt="paris">
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i> Paris</h3>
+          <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Ducimus, Velit.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="price">$100.00 <span>$300.00</span></div>
+          <button class="btn">Book Now</button>
+        </div>
+      </article>
+    
+    </div>
+    <div class="btn-center">
+  <a href="#" alt="" class="btn">More</a>
+</div>
+
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <h2 class="heading">SERVICES</h2>
+
+    <div class="service-grid">
+      <div class="service">
+        <i class="fas fa-hotel"></i>
+        <h4>Affordable Hotels</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-utensils"></i>
+        <h4>Food And Drinks</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-bullhorn"></i>
+        <h4>Safty Guide</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-globe-asia"></i>
+        <h4>Around The World</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-plane"></i>
+        <h4>Fatest Travel</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-person-hiking"></i>
+        <h4>Adventures</h4>
+        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+     <div class="heading"><strong>GALLERY</strong></div>
+
+  <!-- Gallery Grid -->
+  <div class="gallery-container">
+
+    <div class="gallery-item">
+      <a href="#">
+        <img src="gallery/g1.jpeg" alt="Place 1">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+      </a>
+       
+    </div>
+
+    <div class="gallery-item">
+      <a href="#"><img src="gallery/g2.jpeg" alt="Place 2">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    
+    </div>
+
+    <div class="gallery-item">
+      <a href="#img3"><img src="gallery/g3.avif" alt="Place 3">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+
+     <div class="gallery-item">
+      <a href="#"><img src="gallery/g4.jpg" alt="Place 4">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+
+     <div class="gallery-item">
+      <a href="#">
+        <img src="gallery/g5.jpg" alt="Place 5">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+      </a>
+       
+    </div>
+
+    <div class="gallery-item">
+      <a href="#"><img src="gallery/g6.avif" alt="Place 6">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    
+    </div>
+
+    <div class="gallery-item">
+      <a href="#"><img src="gallery/g7.avif" alt="Place 7">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+
+     <div class="gallery-item">
+      <a href="#"><img src="gallery/g8.avif" alt="Place 8">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+     <div class="gallery-item">
+      <a href="#">
+        <img src="gallery/g9.webp" alt="Place 1">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+      </a>
+       
+    </div>
+
+    <div class="gallery-item">
+      <a href="#"><img src="gallery/g10.jpg" alt="Place 2">
+        <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    
+    </div>
+
+    <div class="gallery-item">
+      <a href="#img3"><img src="gallery/g11.jpeg" alt="Place 3">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+
+     <div class="gallery-item">
+      <a href="#"><img src="gallery/g12.jpg" alt="Place 4">
+    <div class="overlay">
+          <h3>Amazing Places</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quos!</p>
+          <button>See More</button>
+        </div>
+    </a>
+    </div>
+
+
+ </div>
+  </section>
+<!-- Reviews -->
+ <!-- Review Section -->
+  <section class="review section" id="review">
+    <h2 class="heading">REVIEW</h2>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Review 1 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r1.webp" alt="John Deo">
+            <h4>John Deo</h4>
+            <p>Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Placeat In Ipsum Ea.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r2.jpeg" alt="John Deo">
+            <h4>Sophia Turner</h4>
+            <p>Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Nam Aspernatur Vel Libero.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r3.jpeg" alt="John Deo">
+            <h4>Liam Wilson</h4>
+            <p>Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Quis Similique Recusandae.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r5.jpeg" alt="Jane Smith">
+            <h4>Jane Smith</h4>
+            <p>Voluptate Deleniti Quam Laborum Eveniet At Aspernatur Fugit Quidem. Ex, Iste!</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r4.jpeg" alt="Mark Lee">
+            <h4>Mark Lee</h4>
+            <p>Dolore Maxime Ipsa Provident Omnis Quasi. Facere Tempora Explicabo Vitae.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="swiper-slide">
+          <div class="review-card">
+            <img src="gallery/r6.jpeg" alt="Anna Brown">
+            <h4>Anna Brown</h4>
+            <p>Sit Amet Consectetur Adipisicing Elit. Maxime, Doloribus. Quidem Quasi Dolore.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-prev custom-nav">&lt;</div>
+      <div class="swiper-button-next custom-nav">&gt;</div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <h2 class="heading">CONTACT</h2>
+    <div class="row">
+      <div class="image">
+        <img src="gallery/c1.avif" alt="Contact artwork">
+      </div>
+
+      <form class="contact-form" onsubmit="return false;">
+        <div class="inputRow">
+          <input type="text" placeholder="name" required />
+          <input type="email" placeholder="email" required />
+        </div>
+        <div class="inputRow">
+          <input type="number" placeholder="number" required />
+          <input type="text" placeholder="subjct" required />
+        </div>
+        <textarea rows="8" placeholder="message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>©️ 2025 Travel. All rights reserved.</p>
+  </footer>
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   
+  <!-- Swiper Init -->
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2
+        },
+        1024: {
+          slidesPerView: 3,
+          slidesPerGroup: 3
+        }
+      }
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
